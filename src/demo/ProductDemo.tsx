@@ -1,4 +1,4 @@
-import { ShoppingCart, useShoppingCart } from "../SDK/cart";
+import { ShoppingCart, useShoppingCart } from "../sdk";
 
 const products = [
   { id: "1", name: "T-shirt", price: 199 },
