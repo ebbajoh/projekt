@@ -1,11 +1,6 @@
-<<<<<<< Updated upstream
 import { ShoppingCart } from "../sdk/cart/ShoppingCart.tsx";
 import { useShoppingCart } from "../sdk/cart/useShoppingCart.ts";
 //funakr nu
-=======
-import React from "react";
-import { ShoppingCart, useShoppingCart } from "../SDK/cart";
->>>>>>> Stashed changes
 
 const products = [
   { id: "1", name: "T-shirt", price: 199 },
