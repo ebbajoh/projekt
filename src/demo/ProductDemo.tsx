@@ -1,6 +1,6 @@
 import { ShoppingCart } from "../sdk/cart/ShoppingCart.tsx";
 import { useShoppingCart } from "../sdk/cart/useShoppingCart.ts";
-
+//funakr nu
 
 const products = [
   { id: "1", name: "T-shirt", price: 199 },
