@@ -1,4 +1,6 @@
-import { ShoppingCart, useShoppingCart } from "../sdk";
+import { ShoppingCart } from "../sdk/cart/ShoppingCart.tsx";
+import { useShoppingCart } from "../sdk/cart/useShoppingCart.ts";
+
 
 const products = [
   { id: "1", name: "T-shirt", price: 199 },
