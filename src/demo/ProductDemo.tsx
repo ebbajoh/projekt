@@ -1,5 +1,9 @@
-import { ShoppingCart } from "../sdk/cart/ShoppingCart.tsx";
-import { useShoppingCart } from "../sdk/cart/useShoppingCart.ts";
+import React from "react";
+import { ShoppingCart } from "../sdk/cart/ShoppingCart";
+import { useShoppingCart } from "../sdk/cart/useShoppingCart";
+
+/// hej
+
 //funakr nu
 
 const products = [
