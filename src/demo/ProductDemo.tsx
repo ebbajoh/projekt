@@ -1,4 +1,3 @@
-import React from "react";
 import { ShoppingCart } from "../sdk/cart/ShoppingCart";
 import { useShoppingCart } from "../sdk/cart/useShoppingCart";
 

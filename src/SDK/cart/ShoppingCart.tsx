@@ -1,5 +1,4 @@
 import { CartItem } from "./useShoppingCart";
-import React from "react";
 
 type Props = {
   items: CartItem[];
