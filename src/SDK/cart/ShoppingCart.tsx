@@ -3,7 +3,7 @@ import { CartItem } from "./useShoppingCart";
 type Props = {
   items: CartItem[];
   total: number;
-  onRemove: (id: string) => void;
+  onRemove: (cartItemId: string) => void;
 };
 
 export function ShoppingCart({ items, total, onRemove }: Props) {
@@ -31,7 +31,7 @@ export function ShoppingCart({ items, total, onRemove }: Props) {
       <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         {items.map((item) => (
           <li
-            key={item.id}
+            key={item.cartItemId}
             style={{
               display: "flex",
               alignItems: "center",
@@ -54,7 +54,7 @@ export function ShoppingCart({ items, total, onRemove }: Props) {
             </div>
 
             <button
-              onClick={() => onRemove(item.id)}
+              onClick={() => onRemove(item.cartItemId)}
               style={{
                 padding: "4px 8px",
                 borderRadius: "6px",
@@ -69,7 +69,6 @@ export function ShoppingCart({ items, total, onRemove }: Props) {
         ))}
       </ul>
 
-      {/* ✅ Properly aligned total */}
       <div
         style={{
           marginTop: "16px",
