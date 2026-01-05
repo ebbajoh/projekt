@@ -34,10 +34,10 @@ export function ProductDemo() {
         padding: "24px",
         fontFamily: "system-ui, sans-serif",
         background: "#f5f5f7",
-        borderRadius: "16px",
+        borderRadius: "1npm6px",
       }}
     >
-      <h1 style={{ marginBottom: "24px" }}>Product Demo</h1>
+      <h1 style={{ marginBottom: "24px" }}>My Shopping Cart</h1>
 
       {/* Carousel section */}
       <div
