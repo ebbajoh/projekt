@@ -37,7 +37,7 @@ export function ProductDemo() {
         fontFamily: "system-ui, sans-serif",
         background: "#f5f5f7",
         borderRadius: "16px",
-        textAlign: "center", // ✅ center text
+        textAlign: "center", 
       }}
     >
       <h1 style={{ marginBottom: "24px" }}>My Shopping Cart</h1>
@@ -46,7 +46,7 @@ export function ProductDemo() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center", // ✅ center carousel
+          justifyContent: "center", 
           padding: "16px",
           borderRadius: "12px",
           background: "#ffffff",
@@ -64,7 +64,7 @@ export function ProductDemo() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center", // ✅ center button
+          justifyContent: "center", 
           marginBottom: "32px",
         }}
       >
@@ -88,7 +88,7 @@ export function ProductDemo() {
       <div
         style={{
           display: "flex",
-          justifyContent: "center", // ✅ center cart
+          justifyContent: "center", 
         }}
       >
         <ShoppingCart
