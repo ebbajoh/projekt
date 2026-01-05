@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ShoppingCart } from "../sdk/cart/ShoppingCart";
 import { useShoppingCart } from "../sdk/cart/useShoppingCart";
 import { Carousel } from "../sdk/carousel/Carousel";
@@ -25,6 +26,7 @@ const products = [
 
 export function ProductDemo() {
   const cart = useShoppingCart();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <div
@@ -34,7 +36,8 @@ export function ProductDemo() {
         padding: "24px",
         fontFamily: "system-ui, sans-serif",
         background: "#f5f5f7",
-        borderRadius: "1npm6px",
+        borderRadius: "16px",
+        textAlign: "center", // ✅ center text
       }}
     >
       <h1 style={{ marginBottom: "24px" }}>My Shopping Cart</h1>
@@ -42,6 +45,8 @@ export function ProductDemo() {
       {/* Carousel section */}
       <div
         style={{
+          display: "flex",
+          justifyContent: "center", // ✅ center carousel
           padding: "16px",
           borderRadius: "12px",
           background: "#ffffff",
@@ -49,37 +54,49 @@ export function ProductDemo() {
           marginBottom: "24px",
         }}
       >
-        <Carousel items={products} />
+        <Carousel
+          items={products}
+          onIndexChange={setCurrentIndex}
+        />
       </div>
 
-      {/* Add buttons */}
-      <div style={{ marginBottom: "32px" }}>
-        {products.map((p) => (
-          <button
-            key={p.id}
-            onClick={() => cart.add(p)}
-            style={{
-              marginRight: "8px",
-              marginBottom: "8px",
-              padding: "8px 12px",
-              borderRadius: "8px",
-              border: "none",
-              background: "#0070f3",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            Add {p.name}
-          </button>
-        ))}
+      {/* Single synced Add button */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center", // ✅ center button
+          marginBottom: "32px",
+        }}
+      >
+        <button
+          onClick={() => cart.add(products[currentIndex])}
+          style={{
+            padding: "10px 16px",
+            borderRadius: "8px",
+            border: "none",
+            background: "#0070f3",
+            color: "white",
+            cursor: "pointer",
+            fontSize: "16px",
+          }}
+        >
+          Add {products[currentIndex].name}
+        </button>
       </div>
 
       {/* Shopping Cart */}
-      <ShoppingCart
-        items={cart.items}
-        total={cart.total}
-        onRemove={cart.remove}
-      />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center", // ✅ center cart
+        }}
+      >
+        <ShoppingCart
+          items={cart.items}
+          total={cart.total}
+          onRemove={cart.remove}
+        />
+      </div>
     </div>
   );
 }
