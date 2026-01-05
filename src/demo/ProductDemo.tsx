@@ -27,6 +27,7 @@ export function ProductDemo() {
   const cart = useShoppingCart();
 
   return (
+<<<<<<< Updated upstream
     <div
       style={{
         maxWidth: "900px",
@@ -38,6 +39,10 @@ export function ProductDemo() {
       }}
     >
       <h1 style={{ marginBottom: "24px" }}>Product Demo</h1>
+=======
+    <div>
+      <h1>My Shopping Cart</h1>
+>>>>>>> Stashed changes
 
       {/* Carousel section */}
       <div
