@@ -20,7 +20,6 @@ export function Carousel({
   const { index, next, prev } = useCarousel(items.length);
   const current = items[index];
 
-  // 🔔 Notify parent when visible item changes
   useEffect(() => {
     onIndexChange?.(index);
   }, [index, onIndexChange]);
