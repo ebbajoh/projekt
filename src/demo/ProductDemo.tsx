@@ -23,9 +23,11 @@ const products = [
     image: "/images/hat.png",
   },
 ];
-
+// demo component
 export function ProductDemo() {
+  // logic
   const cart = useShoppingCart();
+  // current value, changes value: no i=2, set(2)!
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
@@ -42,7 +44,7 @@ export function ProductDemo() {
     >
       <h1 style={{ marginBottom: "24px" }}>My Shopping Cart</h1>
 
-      {/* Carousel section */}
+      {/* carousel */}
       <div
         style={{
           display: "flex",
@@ -60,7 +62,7 @@ export function ProductDemo() {
         />
       </div>
 
-      {/* Single synced Add button */}
+      {/* add buttonm add current product with index */}
       <div
         style={{
           display: "flex",
@@ -84,7 +86,7 @@ export function ProductDemo() {
         </button>
       </div>
 
-      {/* Shopping Cart */}
+      {/* shopping cart */}
       <div
         style={{
           display: "flex",

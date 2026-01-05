@@ -12,7 +12,7 @@ type Props = {
   imageWidth?: number;
   onIndexChange?: (index: number) => void;
 };
-// 300: "suggestion"
+// 300: "suggestion" ej obligatorisk
 export function Carousel({ items, imageWidth = 300, onIndexChange, }: Props) {
   const { index, next, prev } = useCarousel(items.length);
   // index: place of image 1, 2, 3
