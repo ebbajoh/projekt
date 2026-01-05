@@ -1,13 +1,17 @@
 import { CartItem } from "./useShoppingCart";
 
+// defines APIt for shopping cart conponent 
 type Props = {
   items: CartItem[];
   total: number;
   onRemove: (cartItemId: string) => void;
 };
 
+// the component is stateless and is only responsible for rendering the UI
 export function ShoppingCart({ items, total, onRemove }: Props) {
+  
   return (
+
     <div
       style={{
         width: "100%",

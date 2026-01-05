@@ -11,6 +11,7 @@ export type CartItem = {
 export function useShoppingCart() {
   const [items, setItems] = useState<CartItem[]>([]);
 
+  //Adding an item and generates a random unique ID
   const add = (item: Omit<CartItem, "cartItemId">) => {
   setItems((prev) => [
     ...prev,
@@ -21,6 +22,7 @@ export function useShoppingCart() {
   ]);
 };
 
+//Removes one item form the cart
 const remove = (cartItemId: string) => {
   setItems((prev) =>
     prev.filter((i) => i.cartItemId !== cartItemId)
@@ -28,6 +30,7 @@ const remove = (cartItemId: string) => {
 };
 
 
+//Adding the prices to get out total 
   const total = items.reduce((sum, i) => sum + i.price, 0);
 
   return {
