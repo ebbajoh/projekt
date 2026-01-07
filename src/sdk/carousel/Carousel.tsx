@@ -44,3 +44,4 @@ export function Carousel({ items, imageWidth = 300, onIndexChange, }: Props) {
     </div>
   );
 }
+

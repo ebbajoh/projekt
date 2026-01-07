@@ -13,8 +13,7 @@ export function useShoppingCart() {
 
   //Adding an item and generates a random unique ID
   const add = (item: Omit<CartItem, "cartItemId">) => {
-  setItems((prev) => [
-    ...prev,
+  setItems((prev) => [ ...prev,
     {
       ...item,
       cartItemId: crypto.randomUUID(),
@@ -25,6 +24,7 @@ export function useShoppingCart() {
 //Removes one item form the cart
 const remove = (cartItemId: string) => {
   setItems((prev) =>
+  // keep all items with other id than chosen item
     prev.filter((i) => i.cartItemId !== cartItemId)
   );
 };
